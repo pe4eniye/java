@@ -4,15 +4,11 @@ public class MyFirstProgram {
 
   public static void main (String[] args) {
 
-    int a = 6;
-    int b = 6;
-    System.out.println("Площадь прямоугольника = " + Kvadrat(a, b));
+    Kvadrati k = new Kvadrati(4);
+    System.out.println("Площадь квадрата с длиной стороны " + k.dlinaa + " = " + k.razmer() + " см");
+
+    Pryamougolnik p = new Pryamougolnik(4,6);
+    System.out.println("Площадь прямоугольника со сторономи " + p.dlina + p.shirina + " = " + p.razmer() + " см");
 
     }
-
-  public static int Kvadrat(int dlina, int shirina) {
-    return dlina * shirina;
   }
-
-  }
-

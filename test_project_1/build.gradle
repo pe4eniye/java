@@ -8,4 +8,6 @@ repositories {
 
 dependencies {
     implementation 'org.testng:testng:7.6.0'
+    implementation 'org.apache:apache:26'
+    implementation 'org.apache.commons.io'
 }

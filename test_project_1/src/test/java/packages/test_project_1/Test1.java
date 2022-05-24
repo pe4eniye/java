@@ -1,16 +1,16 @@
-package ui.tests;
+package packages.test_project_1;
 
-import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.fail;
 
-public class SignInTest {
+
+public class Test1 {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -44,7 +44,7 @@ public class SignInTest {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
-      fail(verificationErrorString);
+      Assert.fail(verificationErrorString);
     }
   }
 

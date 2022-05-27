@@ -28,15 +28,9 @@ public class SignInTest {
 
   @Test
   public void testUntitledTestCase() throws Exception {
-    driver.get("https://www.linkedin.com/checkpoint/lg/sign-in-another-account");
-    driver.findElement(By.id("username")).click();
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("pe4eniye@gmail.com");
-    driver.findElement(By.id("password")).click();
-    driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("alteri10021990");
-    driver.findElement(By.xpath("//button[@type='submit']")).click();
-    driver.get("https://www.linkedin.com/feed/");
+    driver.get("https://cookies.in.ua/");
+    driver.findElement(By.linkText("Контакты")).click();
+    driver.findElement(By.xpath("//section[@id='Contact']/div/div/div[2]/div/div/div/form/div[5]/button")).click();
   }
 
   @AfterClass(alwaysRun = true)

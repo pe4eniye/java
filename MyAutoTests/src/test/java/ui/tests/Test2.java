@@ -1,5 +1,9 @@
 package ui.tests;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Test2 {
  public static void main(String[] args) {
 
@@ -76,7 +80,47 @@ public class Test2 {
    qwe++;
   } while (qwe < 5);
 
+  System.out.println();
 
+  //коллекция List = Для работы с динамическими массивами. Когда добавил элемент - массив увеличивается. Когда удаляю элемент - массив уменьшается.
+  List<Integer> myList = new ArrayList<>();
+
+  myList.add(55); // метод .add для добавления элемента в массив
+  myList.add(66);
+  myList.add(77);
+
+  int yyy = myList.get(1); // метод .get для получения значения элемента из массива
+  System.out.println(yyy);
+
+  myList.set(1, 777); // метод .set для перезаписи значения элемента массива. Типа к "нулевому" элементу присвоить значение "888"
+  System.out.println(myList.get(1));
+
+  // myList.remove(1); // метод .remove для удаления элемента из массива
+  // myList.get(1);
+  // System.out.println(myList.size()); // метод .size чтобы узнать размер массива в данный момент
+  // myList.clear(); // метод .clear для очистки массива
+
+  List<Integer> list222 = new ArrayList<>();
+  list222.add(123);
+
+  myList.addAll(list222); // метод .addAll чтоб добавить все элементы одного массива в другой
+  System.out.println(myList.size());
+
+  System.out.println();
+
+  // итератор - это интерфейс, кот позволяет работать с элементами списка или с какой-то коллекцией
+  Iterator<Integer> myIterator = myList.iterator();
+  System.out.println(myIterator.next()); // метод .next выводит следующий элемент (стартует с нулевого)
+
+  while (myIterator.hasNext()){ // метод .hasNext проверяет есть ли дальше какой-то элемент после того, на котором метод .next остановился. Возвращает true либо false.
+   System.out.println(myIterator.next());
+  }
+
+  System.out.println();
+
+  for (int i : myList) {
+   System.out.println(i);
+  }
 
  }
 }
